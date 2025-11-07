@@ -5,7 +5,7 @@ Repository for the Introduction to Machine Learning in Plant Sciences course (Mo
 
 This course uses **git** and **conda**. **git** and **conda** are standard tools for Machine Learning development in Python (and beyond). There are many resources and tutorials online, if you want to learn more.  
 
-If you have never used **git** and **conda**, the following instruction explain how to set them up on your device, how to clone the repository to have the code on your device and how to create the environment to run the code. 
+If you have never used **git** and **conda**, the following instruction explain how to set them up on your device, how to clone the repository to have the code on your device, how to create the environment for the course and how to run the code.
 
 If you do not want to use **git** and/or **conda**, we additionally point to alternative ways to download the code and create an environment for the course.
 
@@ -28,3 +28,11 @@ If you do not have **conda** setup on your device, follow instructions from [Ana
 To create the environment on your devive, once **conda** is setup, navigate to the folder ML4PS and run on your favorite command line interface ``conda env create -f 0-Setup/ML4PSrequirements.yml``. 
 
 If you prefer not using **conda**, you can create an environment with your favorite environment manager (**venv**, **uv**...) using the requirements file  (``0-Setup/ML4PSrequirements.yml``) or manually installing the packages (**numpy**, **pandas**, **sklearn**, **pytorch**...).
+
+### Installing an IDE
+
+The code for this course consists mainly of **jupyter** notebooks. To read and run notebooks you would need to download and setup an Integrated Development System if you do not have one on your computer. You may choose the IDE of your liking, here are several standard options and their download link:
+
+- [Visual Studio Code](https://code.visualstudio.com/download) (with the Jupyter extension)
+- [Pycharm](https://www.jetbrains.com/pycharm/download/) (with the Markdown plugin)
+- Anaconda's [Spyder] (https://www.anaconda.com/docs/getting-started/working-with-conda/ide-tutorials/spyder) (make sure to add ``spyder-notebook`` to your environment)

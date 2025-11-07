@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Pre-commit hook: clear Jupyter notebook outputs using the ML4PS conda environment
+# To set up the hook on your local repository run: git config core.hooksPath .git-hooks
+
+set -e
+
+# Ensure conda is available
+if ! command -v conda &>/dev/null; then
+    echo "⚠️  Conda not found — skipping notebook cleaning."
+    exit 0
+fi
+
+echo "🧹 Cleaning Jupyter notebook outputs (using ML4PS env)..."
+
+# Find staged notebooks
+files=$(git diff --cached --name-only --diff-filter=ACM | grep '\.ipynb$' || true)
+
+if [ -z "$files" ]; then
+    exit 0
+fi
+
+for file in $files; do
+    if [ -f "$file" ]; then
+        conda run -n ML4PS jupyter nbconvert --clear-output --inplace "$file" >/dev/null 2>&1 || \
+            echo "⚠️  Failed to clean $file"
+        git add "$file"
+    fi
+done
