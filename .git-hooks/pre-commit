@@ -21,7 +21,7 @@ fi
 
 for file in $files; do
     if [ -f "$file" ]; then
-        conda run -n ML4PS jupyter nbconvert --clear-output --inplace "$file" >/dev/null 2>&1 || \
+        conda run -n ML4PSenv jupyter nbconvert --clear-output --inplace "$file" >/dev/null 2>&1 || \
             echo "⚠️  Failed to clean $file"
         git add "$file"
     fi
