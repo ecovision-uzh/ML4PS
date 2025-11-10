@@ -35,4 +35,4 @@ The code for this course consists mainly of **jupyter** notebooks. To read and r
 
 - [Visual Studio Code](https://code.visualstudio.com/download) (with the Jupyter extension)
 - [Pycharm](https://www.jetbrains.com/pycharm/download/) (with the Markdown plugin)
-- Anaconda's [Spyder] (https://www.anaconda.com/docs/getting-started/working-with-conda/ide-tutorials/spyder) (make sure to add ``spyder-notebook`` to your environment)
+- Anaconda's [Spyder](https://www.anaconda.com/docs/getting-started/working-with-conda/ide-tutorials/spyder) (make sure to add ``spyder-notebook`` to your environment)
