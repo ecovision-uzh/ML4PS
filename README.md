@@ -5,9 +5,9 @@ Repository for the Introduction to Machine Learning in Plant Sciences course (Mo
 
 This course uses **git** and **conda**. **git** and **conda** are standard tools for Machine Learning development in Python (and far beyond). There are many resources and tutorials online, if you want to learn more.  
 
-If you have never used **git** and **conda**, the following instruction explain how to set them up on your device. The following section will walk you through how to clone the repository to have the code on your device, how to create the virtual environment for the course dependencies for the course and how to run the code locally on your machine.
+If you have never used **git** and **conda**, the following instruction explain how to set them up on your device. The following sections will walk you through how to clone the repository to have the code on your device, how to create the virtual environment for the course dependencies for the course and how to run the code locally on your machine.
 
-If you do not want to use **git** and/or **conda**, we additionally point to alternative ways to download the code and create an environment for the course. *We nevertheless encourage you to learn these tools - if you do not know them already.*
+If you do not want to use **git** and/or **conda**, we also point to alternative ways to download the code and create an environment for the course. *We nevertheless encourage you to learn these tools - if you do not know them already.*
 
 ### Downloading code
 
@@ -46,3 +46,5 @@ The code for this course consists mainly of **jupyter** notebooks. Jupyter noteb
 - [Visual Studio Code](https://code.visualstudio.com/download) (with the Jupyter extension)
 - [PyCharm](https://www.jetbrains.com/pycharm/download/) (with the Markdown plugin)
 - Anaconda's [Spyder](https://www.anaconda.com/docs/getting-started/working-with-conda/ide-tutorials/spyder) (make sure to add ``spyder-notebook`` to your environment)
+
+With this you should be all setup and ready to go! If ever you have any problem setting up, don't sweat, we will be there to help you with any issues you may have encountered during the setup on the first exercise session. If you have any feedback, on the setup and/or on the course, we are happy to hear it! Enjoy!
