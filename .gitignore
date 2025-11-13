@@ -222,3 +222,5 @@ data/
 # excercise outputs
 ML4PSreplicaenvironment.yml
 .DS_Store
+uv.lock
+pyproject.toml
