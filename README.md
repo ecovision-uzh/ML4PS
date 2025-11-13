@@ -25,13 +25,13 @@ For this course we are using a **conda** environment. To ensure you avoid any te
 
 If you do not have **conda** setup on your device, follow instructions from [Anaconda](https://www.anaconda.com/docs/getting-started/miniconda/install) to install Miniconda on your device.
 
-To create the environment on your devive, once **conda** is setup, navigate to the folder ML4PS and run on your favorite command line interface ``conda env create -f 0-Setup/ML4PSrequirements.yml``. 
+To create the environment on your devive, once **conda** is setup, navigate to the folder ML4PS and run on your favorite command line interface ``conda env create -f 0-Setup/ML4PSrequirements.yml`` (from the root of the repository). 
 
-If you prefer not using **conda**, you can create an environment with your favorite environment manager (**venv**, **uv**...) using the requirements file  (``0-Setup/ML4PSrequirements.yml``) or manually installing the packages (**numpy**, **pandas**, **sklearn**, **pytorch**...).
+If you prefer not using **conda**, you can create an environment with your favorite environment manager (**venv**, **uv**...) using the requirements file  (``0-Setup/ML4PSrequirements.yml`` or ``0-Setup/ML4PSrequirements.txt``) or manually installing the packages (**numpy**, **pandas**, **sklearn**, **pytorch**...).
 
 ### Installing an IDE
 
-The code for this course consists mainly of **jupyter** notebooks. To read and run notebooks you would need to download and setup an Integrated Development System if you do not have one on your computer. You may choose the IDE of your liking, here are several standard options and their download link:
+The code for this course consists mainly of **jupyter** notebooks. To read and run notebooks seamlessly you need to download and setup an Integrated Development System if you do not already have one on your computer. You may choose the IDE of your liking, here are several standard options and their download link:
 
 - [Visual Studio Code](https://code.visualstudio.com/download) (with the Jupyter extension)
 - [Pycharm](https://www.jetbrains.com/pycharm/download/) (with the Markdown plugin)
