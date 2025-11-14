@@ -1,6 +1,4 @@
-# data
 *.jpg
-data/
 
 # excercise outputs
 ML4PSreplicaenvironment.yml
