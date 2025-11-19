@@ -48,3 +48,21 @@ The code for this course consists mainly of **jupyter** notebooks. Jupyter noteb
 - Anaconda's [Spyder](https://www.anaconda.com/docs/getting-started/working-with-conda/ide-tutorials/spyder) (make sure to add ``spyder-notebook`` to your environment)
 
 With this you should be all setup and ready to go! If ever you have any problem setting up, don't sweat, we will be there to help you with any issues you may have encountered during the setup on the first exercise session. If you have any feedback, on the setup and/or on the course, we are happy to hear it! Enjoy!
+
+### Google Colab access
+
+If you have problems setting up the environment locally, you can run the notebooks in **Google Colab** instead.  
+To use Colab, you need a **Google account**.
+
+Available notebooks:
+
+- [Lab 2. Linear Regression](https://colab.research.google.com/drive/1wKMVGbBtlE6WLirXwoam6hCOVeEi7Vmq?usp=sharing)
+
+To use a notebook in your own workspace:
+
+1. Open the link in your browser.
+2. Make sure you are logged into your Google account.
+3. In the menu, go to **File → Save a copy in Drive**.  
+   This will save a personal copy of the notebook in your Google Drive.
+4. Make sure you have enough free space in your Google Drive to store the notebook and any generated files.
+
