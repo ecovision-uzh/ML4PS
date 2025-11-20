@@ -57,6 +57,7 @@ To use Colab, you need a **Google account**.
 Available notebooks:
 
 - [Lab 2. Linear Regression](https://colab.research.google.com/drive/1wKMVGbBtlE6WLirXwoam6hCOVeEi7Vmq?usp=sharing)
+- [Lab3. Classification and Clustering](https://colab.research.google.com/drive/1CFg9cVsB0s5i8TzGVXZpsSf2keOWOKaP?usp=sharing)
 
 To use a notebook in your own workspace:
 
