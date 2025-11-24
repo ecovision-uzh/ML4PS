@@ -1,0 +1,18 @@
+tasks:
+  - name: Intstall requirements
+    init: pip install -r 0-Setup/ML4PSrequirements.txt
+    command: |
+      pre-commit install --install-hooks
+      python -m ipykernel install --user --name=base --display-name "ML4PSenv"
+
+vscode:
+  extensions:
+    - codezombiech.gitignore # Language support for .gitignore files
+    - esbenp.prettier-vscode # Markdown/CommonMark linting and style checking for Visual Studio Code
+    - EditorConfig.EditorConfig # override user/workspace settings with settings found in .editorconfig files
+    - mechatroner.rainbow-csv # Highlight columns in csv files in different colors
+    - oderwat.indent-rainbow # Highlight indentation level
+    - streetsidesoftware.code-spell-checker # Spelling checker for source code
+    - ritwickdey.LiveServer # See html pages in VS
+    - ms-toolsai.jupyter # Jupyter Notebook for VS
+    - ms-python.python
