@@ -59,6 +59,7 @@ Available notebooks:
 - [Lab 2. Linear Regression](https://colab.research.google.com/drive/1wKMVGbBtlE6WLirXwoam6hCOVeEi7Vmq?usp=sharing)
 - [Lab3. Classification and Clustering](https://colab.research.google.com/drive/1CFg9cVsB0s5i8TzGVXZpsSf2keOWOKaP?usp=sharing)
 - [Lab 4. Deep Learning](https://colab.research.google.com/drive/1nj2ix-j9NGelsxnpNE5qh3YdtC_tdCst?usp=sharing)
+- [Lab 5. Biodiversity](https://colab.research.google.com/drive/1Qli2Q87wX3YPkSQY5HTISGcphGczJ_TD?usp=sharing)
 
 To use a notebook in your own workspace:
 
