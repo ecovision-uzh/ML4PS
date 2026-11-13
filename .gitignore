@@ -1,6 +1,12 @@
 *.jpg
 
+# environments
+.venv*/
+__pycache__/
+
 # excercise outputs
 ML4PSreplicaenvironment.yml
+ML4PSreplica/
+ML4PSreplicarequirements.txt
 1-IntroPython/data/
 4-DeepLearning/data/

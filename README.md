@@ -3,11 +3,11 @@ Repository for the Introduction to Machine Learning in Plant Sciences course (Mo
 
 ## Setup instruction
 
-This course uses **git** and **conda**. **git** and **conda** are standard tools for Machine Learning development in Python (and far beyond). There are many resources and tutorials online, if you want to learn more.  
+This course uses **git** and **uv**. **git** and **uv** are standard tools for Machine Learning development in Python (and far beyond). Additional resources and tutorials are available online, if you want to learn more.  
 
-If you have never used **git** and **conda**, the following instruction explain how to set them up on your device. The following sections will walk you through how to clone the repository to have the code on your device, how to create the virtual environment for the course dependencies for the course and how to run the code locally on your machine.
+If you have never used **git** and **uv**, the following instruction explain how to set them up on your device. The following sections will walk you through how to clone the repository to have the code on your device, how to create the virtual environment for the course dependencies and how to run the code locally on your machine.
 
-If you do not want to use **git** and/or **conda**, we also point to alternative ways to download the code and create an environment for the course. *We nevertheless encourage you to learn these tools - if you do not know them already.*
+If you do not want to use **git** and/or **uv**, we also point to alternative ways to download the code and create an environment for the course (with **conda** or **pip**). *We nevertheless encourage you to learn these tools - if you do not know them already.*
 
 ### Downloading code
 
@@ -27,27 +27,74 @@ If you prefer not using **git**, you can download the repository via Code > down
 
 ### Setting up the environment
 
-The content of this course was designed and tested using the **conda** environment ``ML4PSenv``. This section explains how to replicate it locally on your machine. To ensure you avoid any dependency issues, we recommend using the course environment. 
+The content of this course was designed and tested using the course environment: Python 3.11 and the libraries listed in ``pyproject.toml`` (with the exact versions recorded in ``uv.lock``), plus PyTorch 2.6 for deep learning. This section explains how to replicate it locally on your machine with **uv** (recommended), **conda** or **pip**. To ensure you avoid any dependency issues, we recommend using the course environment.
 
-If you do not have **conda** set up on your device, follow the instructions from [Anaconda](https://www.anaconda.com/docs/getting-started/miniconda/install) to install Miniconda on your device.
+#### With uv (recommended)
 
-To create the environment on your devive, once **conda** is set up, navigate to the the root folder of the ML4PS repository and run this command on your favorite command line interface:
+**uv** installs Python and all the libraries of the course with a single command. If you do not have **uv** set up on your device, follow the [uv installation instructions](https://docs.astral.sh/uv/getting-started/installation/) for your device, for example on macOS and Linux:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+and on Windows (in PowerShell):
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+To create the environment on your device, once **uv** is set up, navigate to the root folder of the ML4PS repository and run this command on your favorite command line interface:
+
+```bash
+uv sync
+```
+
+This creates the environment in the ``.venv`` folder of the repository (and downloads Python 3.11 if needed). When your IDE asks you to select a kernel or a Python interpreter, select ``.venv`` in the repository. Running ``uv sync`` again at any time brings the environment back to the course versions.
+
+This environment covers the first module of the course. The deep learning part (module 2, and the optional last exercise of ``1-IntroPython``) also needs **PyTorch**. To add it to the environment, run from the root folder of the repository:
+
+```bash
+uv pip install --torch-backend auto torch==2.6.0 torchvision==0.21.0 segmentation-models-pytorch==0.5.0
+```
+
+``--torch-backend auto`` installs the version of PyTorch matching your computer: the GPU (CUDA) version if you have an NVIDIA GPU, the CPU version otherwise. PyTorch is not part of ``uv.lock``, so a plain ``uv sync`` removes it again: use ``uv sync --inexact`` instead, or run the command above again. 
+
+*Limitations:* Note that PyTorch 2.6 does not support the most recent GPUs (RTX 50 series), if you have a very recent GPU use a more recent version of PyTorch (versions should be backward compatible). PyTorch 2.6 is not available for Intel Macs through **uv** or **pip**, please use **conda** instead.
+
+#### With conda
+
+If you do not have **conda** set up on your device, follow the instructions from [Anaconda](https://www.anaconda.com/docs/getting-started/miniconda/install) to install Miniconda on your device. Then navigate to the root folder of the ML4PS repository and run:
 
 ```bash
 conda env create -f 0-Setup/ML4PSrequirements.yml
 ``` 
 
-If you prefer not using **conda**, you can create an environment with your favorite environment manager (**venv**, **uv**...) using the requirements file  (``0-Setup/ML4PSrequirements.yml`` or ``0-Setup/ML4PSrequirements.txt``) or manually installing the packages (**numpy**, **pandas**, **sklearn**, **pytorch**...) with the appropriate versions.
+This creates the **conda** environment ``ML4PSenv``, PyTorch included: select it when your IDE asks you to select a kernel.
+
+#### With venv and pip
+
+With Python 3.11 installed on your device, navigate to the root folder of the ML4PS repository and run:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate    # on Windows: .venv\Scripts\activate
+pip install -r 0-Setup/ML4PSrequirements.txt
+```
+
+and select ``.venv`` when your IDE asks you to select a kernel. This environment includes PyTorch. On Linux, **pip** installs its CUDA version, a large download (several GB).
+
+You can also create an environment with your favorite environment manager using the requirements files (``0-Setup/ML4PSrequirements.txt`` or ``0-Setup/ML4PSrequirements.yml``) or manually installing the packages (**numpy**, **pandas**, **sklearn**, **pytorch**...) with the appropriate versions.
 
 ### Installing an IDE
 
-The code for this course consists mainly of **jupyter** notebooks. Jupyter notebooks are a handy way of writing, testing, and documenting **python** code. To read and run notebooks seamlessly you need to download and set up an Integrated Development System if you do not already have one on your computer. You may choose the IDE of your liking, here are several standard options and their download link:
+The code for this course consists mainly of **jupyter** notebooks. Jupyter notebooks are a handy way of writing, testing, and documenting **python** code. To read and run notebooks seamlessly we recommend downloading and setting up an Integrated Development System if you do not already have one on your computer. You may choose the IDE of your liking, here are several standard options and their download link:
 
 - [Visual Studio Code](https://code.visualstudio.com/download) (with the Jupyter extension)
 - [PyCharm](https://www.jetbrains.com/pycharm/download/) (with the Markdown plugin)
 - Anaconda's [Spyder](https://www.anaconda.com/docs/getting-started/working-with-conda/ide-tutorials/spyder) (make sure to add ``spyder-notebook`` to your environment)
+- No IDE: with **uv**, run ``uv run --with jupyterlab jupyter lab`` from the root folder of the repository to open the notebooks in **JupyterLab**, in your browser
 
-With this you should be all setup and ready to go! If ever you have any problem setting up, don't sweat, we will be there to help you with any issues you may have encountered during the setup on the first exercise session. If you have any feedback, on the setup and/or on the course, we are happy to hear it! Enjoy!
+With this you should be all setup and ready to go! If ever you run into problems with the set up, don't sweat, we will be there to help you with any issues you may encounter during the setup on the first exercise session. If you have any feedback, on the setup and/or on the course, we are happy to hear it! Enjoy!
 
 ### Google Colab access
 
