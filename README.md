@@ -59,7 +59,7 @@ uv pip install --torch-backend auto torch==2.6.0 torchvision==0.21.0 segmentatio
 
 ``--torch-backend auto`` installs the version of PyTorch matching your computer: the GPU (CUDA) version if you have an NVIDIA GPU, the CPU version otherwise. PyTorch is not part of ``uv.lock``, so a plain ``uv sync`` removes it again: use ``uv sync --inexact`` instead, or run the command above again. 
 
-*Limitations:* Note that PyTorch 2.6 does not support the most recent GPUs (RTX 50 series), if you have a very recent GPU use a more recent version of PyTorch (versions should be backward compatible). PyTorch 2.6 is not available for Intel Macs through **uv** or **pip**, please use **conda** instead.
+*Limitations:* Note that PyTorch 2.6 does not support the most recent GPUs (RTX 50 series), if you have a very recent GPU you may need to install more recent versions of the pytorch libraries. PyTorch 2.6 is not available for Intel Macs through **uv** or **pip**, please use **conda** instead.
 
 #### With conda
 
