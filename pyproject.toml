@@ -15,7 +15,7 @@ dependencies = [
     "scikit-learn==1.7.2",
     "matplotlib==3.10.7",
     "nbconvert==7.16.6",
-    "geodatasets==2024.8.0",
+    "geodatasets==2026.11.0",
     "geopandas==1.1.1",
     "seaborn==0.13.2",
     "wget==3.2",
