@@ -1,0 +1,1 @@
+gpd.read_file("https://github.com/geopandas/geodatasets/raw/refs/heads/main/data_backup/wise_large_rivers.zip")
