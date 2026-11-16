@@ -1,0 +1,22 @@
+# Course environment for ML4PS, managed with uv (https://docs.astral.sh/uv/): run `uv sync` to create it in .venv.
+# Same versions as 0-Setup/ML4PSrequirements.txt, without PyTorch: the deep learning libraries are added afterwards,
+# for the second module, with the version matching the local hardware (see README).
+# After editing this file, run `uv lock` to update uv.lock (the exact versions of all dependencies).
+
+[project]
+name = "ml4ps"
+version = "0.1.0"
+description = "Environment for the Introduction to Machine Learning in Plant Sciences course"
+requires-python = "==3.11.*"
+dependencies = [
+    "ipykernel==7.0.1",
+    "numpy==2.3.4",
+    "pandas==2.3.3",
+    "scikit-learn==1.7.2",
+    "matplotlib==3.10.7",
+    "nbconvert==7.16.6",
+    "geodatasets==2024.8.0",
+    "geopandas==1.1.1",
+    "seaborn==0.13.2",
+    "wget==3.2",
+]
