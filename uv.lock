@@ -261,14 +261,14 @@ wheels = [
 
 [[package]]
 name = "geodatasets"
-version = "2024.8.0"
+version = "2026.11.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pooch" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c5/19/37a772bf09a9758eb1c09ed9ad6a11dcf0435dadd89bc46e3f78d709f353/geodatasets-2024.8.0.tar.gz", hash = "sha256:ea1b0f885f1b3305d4a308b2ddee042e425c5288b5ff6b00e6b0ac74a4d5e8d9", size = 457760, upload-time = "2024-08-30T14:35:31.198Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/6c/51/bdcde4ad5d261aa9267513ff91a284744ae948e98f56b805e147eaa2c7ef/geodatasets-2026.11.0.tar.gz", hash = "sha256:a591b28e939cb4687039fef24b421adf8f6cc0064a78988e9de8a22fd5d0651a", size = 1476398, upload-time = "2026-11-03T13:28:34.834Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/9d/dd/e30e144271280d263c0c10f34fbcf2e09e9a82bd11a165c5f1f498899a29/geodatasets-2024.8.0-py3-none-any.whl", hash = "sha256:fd2a91618277553dbb180496bb952d496e4bc99e8c0066c5dc06701d66d53540", size = 20029, upload-time = "2024-08-30T14:35:29.822Z" },
+    { url = "https://files.pythonhosted.org/packages/52/af/e3180933b9a81b806608b919eb2208fbe99fe535ab2097cfed93d2b95cd3/geodatasets-2026.11.0-py3-none-any.whl", hash = "sha256:7da64f5b2d100358f0fecc56d08a9bf6c917ffb0aa9af8754411fb0323c55168", size = 22627, upload-time = "2026-11-03T13:28:33.873Z" },
 ]
 
 [[package]]
@@ -577,7 +577,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "geodatasets", specifier = "==2024.8.0" },
+    { name = "geodatasets", specifier = "==2026.11.0" },
     { name = "geopandas", specifier = "==1.1.1" },
     { name = "ipykernel", specifier = "==7.0.1" },
     { name = "matplotlib", specifier = "==3.10.7" },
