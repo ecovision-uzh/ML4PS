@@ -105,7 +105,7 @@ Available notebooks:
 
 - [Lab 2. Linear Regression](https://colab.research.google.com/drive/1wKMVGbBtlE6WLirXwoam6hCOVeEi7Vmq?usp=sharing)
 - [Lab3. Classification and Clustering](https://colab.research.google.com/drive/1CFg9cVsB0s5i8TzGVXZpsSf2keOWOKaP?usp=sharing)
-- [Lab 4. Deep Learning](https://colab.research.google.com/github/ecovision-uzh/ML4PS/blob/main/4-DeepLearning/4-DeepLearning.ipynb) (opens the current version from GitHub, run `!pip install segmentation-models-pytorch` in a new cell first)
+- [Lab 4. Deep Learning](https://colab.research.google.com/github/ecovision-uzh/ML4PS/blob/main/4-DeepLearning/4-DeepLearning.ipynb)
 
 To use a notebook in your own workspace:
 
