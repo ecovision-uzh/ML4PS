@@ -1,5 +1,8 @@
 *.jpg
 
+# secrets
+.env
+
 # environments
 .venv*/
 __pycache__/
@@ -10,3 +13,4 @@ ML4PSreplica/
 ML4PSreplicarequirements.txt
 1-IntroPython/data/
 4-DeepLearning/data/
+5-PlantTraits/data/
